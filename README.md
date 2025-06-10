@@ -192,7 +192,10 @@ ARtık kullanıma hazır.. Aşağıdaki linkten girebilirsiniz..
 http://localhost:8080/
 
 
-
+ PERSONEL KAYDI OLUŞTURUR
+        // GNLMDR, GNLMDRYRD, SBMEMUR, USER, TESTADMIN, SBMDR
+        // 11111, 22222, 33333, 44444, 55555, 66666 sicilleri sırasıyla.
+        // PASSWORD 1234 HEPSİNİN
 
 1.  **Projeyi Klonlayın**
     Proyeyi klonlayın. Öncelikle yukarıdaki özet anlatımı okuyunuz.
