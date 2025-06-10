@@ -143,39 +143,46 @@ Rol bazlı yetkilendirme vardır. GNL,GNLMDRYRD,DAIREBSK,SBMDR,SBMEMUR rolleri, 
 
 
 ### Kurulum
-Özet anlatım. 
 
-ADIMLARI TAKİP EDİNİZ.
+Özet anlatım.
 
-Postgres erd_db adında bir database oluşturun. Pg4Admin4 üzerinden ya da terminalden postrges oturumu açıp  Şu komutla: 
+ADIMLARI TAKİP EDİNİZ. DOSYA YOLLARI VE ŞİFREYİ KENDİNİZE GÖRE DÜZENLEYİN.
 
- CREATE DATABASE erd_db;
- 
- Database oluştuktan sonra tablolar ve şemalar yazılım tarafından otomatik oluşturalacaktır.
+Postgresql de erd_db adında bir database oluşturun. Pg4Admin4 üzerinden ya da terminalden postgresql oturumu açıp Şu komutla:
 
-ÖNCELİKLE Jar dosyasını oluşturmak için 
-Dosya yollarını kendinize göre değiştirin.
+```
+CREATE DATABASE erd_db;
+```
+
+Database oluştuktan sonra tablolar ve şemalar yazılım tarafından otomatik oluşturalacaktır.
+
+ÖNCELİKLE Jar dosyasını oluşturmak için Dosya yollarını kendinize göre değiştirin.
 
 Aşağıdaki komutu çalıştırın. pom.xml in buluduğu klasöre cd ile girin.
 
-$env:JAVA_HOME = "C:\JAVALAR\jdk-17.0.0.1"
+```bash
+$env:JAVA_HOME = "C:\JAVALAR\jdk-17.0.0.1" 
 $env:PATH = "$env:JAVA_HOME\bin;" + $env:PATH
-mvn install clean 
-
+mvn install clean
+```
 
 Veritabanına test verilerinin ve tablolarının oluşması için aşağıdaki dev modunda çalıştırmanız gerekiyor.
 
-$env:JAVA_HOME = "C:\JAVALAR\jdk-17.0.0.1"
+```bash
+$env:JAVA_HOME = "C:\JAVALAR\jdk-17.0.0.1" 
 $env:PATH = "$env:JAVA_HOME\bin;" + $env:PATH
-
-
-$env:DB_USERNAME = "postgres"
+```
+Postgresql şifrenizi ve kullanıcı adınıza göre revize edin.
+```bash
+$env:DB_USERNAME = "postgres" 
 $env:DB_PASSWORD = "enes"
+```
 
+```bash
 java -jar target/personel-tayin-talebi-0.0.1.jar --spring.profiles.active=dev
+```
 
-Test verilerini oluşturmak için aşağıdaki link tarayıcıdan çalıştırın. 
-http://localhost:8080/test-verilerini-yukle
+Test verilerini oluşturmak için aşağıdaki link tarayıcıdan çalıştırın. http://localhost:8080/test-verilerini-yukle
 
 çalıştırın..
 
@@ -183,14 +190,13 @@ Terminalde Ctrl C tuşuna basarak spring bootu durdurun.
 
 Aynı ekranda bu sefer aşağıdaki komutu çalıştırın.
 
-java -jar target/personel-tayin-talebi-0.0.1.jar 
-
+```bash
+java -jar target/personel-tayin-talebi-0.0.1.jar
+```
 
 ARtık kullanıma hazır.. Aşağıdaki linkten girebilirsiniz..
 
-
 http://localhost:8080/
-
 
  PERSONEL KAYDI OLUŞTURUR
         // GNLMDR, GNLMDRYRD, SBMEMUR, USER, TESTADMIN, SBMDR
