@@ -163,7 +163,7 @@ Aşağıdaki komutu çalıştırın. pom.xml in buluduğu klasöre cd ile girin.
 ```bash
 $env:JAVA_HOME = "C:\JAVALAR\jdk-17.0.0.1" 
 $env:PATH = "$env:JAVA_HOME\bin;" + $env:PATH
-mvn install clean
+mvn clean install
 ```
 
 Veritabanına test verilerinin ve tablolarının oluşması için aşağıdaki dev modunda çalıştırmanız gerekiyor.
